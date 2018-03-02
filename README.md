@@ -73,3 +73,10 @@ Make sure the `from` address you use when sending transactions is entirely lower
 TypeError: private key should be a Buffer
 ```
 
+# Issue 
+
+Submitting this as a PR since I can't raise an issue on the fork.
+
+Using it with Truffle got me stuck on "Saving artifacts..." after migrations. Everything is fine with the migration, all contract addresses and transaction hashes are correct.
+
+Do you have same problem using it with truffle.
