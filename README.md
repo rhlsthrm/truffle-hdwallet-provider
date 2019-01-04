@@ -1,7 +1,7 @@
 # truffle-hdwallet-provider-privkey
 HD Wallet-enabled Web3 provider. Use it to sign transactions for addresses derived from a raw private key string.
 
-If you are using Web3 1.0.0, you do not need this package! There is a function to get an account object from a private key. The reason I made this package was because this function doesn't exist in the legacy Web3 library.
+If you are using Web3 1.0, please use the `web3-one` branch. Install the package using `npm i truffle-hdwallet-provider-privkey@web3-one`.
 
 ## Install
 
