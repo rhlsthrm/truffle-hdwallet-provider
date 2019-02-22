@@ -1,5 +1,6 @@
 const FiltersSubprovider = require('web3-provider-engine/subproviders/filters.js')
 const HookedSubprovider = require('web3-provider-engine/subproviders/hooked-wallet.js')
+const NonceSubProvider = require('web3-provider-engine/subproviders/nonce-tracker.js');
 const Web3 = require('web3')
 const Transaction = require('ethereumjs-tx')
 const ProviderEngine = require('web3-provider-engine')
@@ -23,6 +24,9 @@ function HDWalletProvider (privateKeys, providerUrl) {
   const tmpWallets = this.wallets;
 
   this.engine = new ProviderEngine()
+
+  // from https://github.com/trufflesuite/truffle-hdwallet-provider/pull/66
+  this.engine.addProvider(new NonceSubProvider())
   this.engine.addProvider(
     new HookedSubprovider({
       getAccounts: function (cb) {
