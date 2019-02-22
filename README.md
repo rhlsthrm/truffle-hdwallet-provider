@@ -6,7 +6,7 @@ If you are using Web3 1.0, please use the `web3-one` branch. Install the package
 ## Install
 
 ```
-$ npm install truffle-hdwallet-provider-privkey
+$ npm install truffle-hdwallet-provider-privkey@web3-one
 ```
 
 ## General Usage
@@ -27,6 +27,19 @@ Parameters:
 - `provider_uri`: `string`. URI of Ethereum client to send all other non-transaction-related Web3 requests.
 
 ## Truffle Usage
+
+### Use Case
+
+I have a an account MetaMask and I want to use it to deploy my contracts to a testnet/mainnnet.
+
+### Steps for MetaMask
+
+- Click 3 dots next to MetaMask
+- Click "Account Details"
+- Click "Export Private Key" and type password
+- Copy private key and use the below steps in your Truffle config.
+
+### Usage
 
 You can easily use this within a Truffle configuration. For instance:
 
